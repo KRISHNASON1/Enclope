@@ -24,7 +24,7 @@ export default function HomePage() {
           subtitle="Our Services"
           title="The Forge"
           description="From robust SaaS platforms to data-driven marketing strategies, we offer a complete suite of digital services built by the next generation of talent."
-          imageUrl="https://placehold.co/800x600/0A0A0A/EAEAEA?text=Services"
+          imageUrl="work.png"
           linkTo="/forge"
         />
 
@@ -33,7 +33,7 @@ export default function HomePage() {
           subtitle="Our Work"
           title="The Showroom"
           description="We don't just talk about quality, we deliver it. Explore our gallery of finished projects and see the impact of our student-led teams."
-          imageUrl="https://placehold.co/800x600/0A0A0A/EAEAEA?text=Portfolio"
+          imageUrl="service.png"
           linkTo="/showroom"
           reverse={true} // This will flip the layout for visual variety
         />
