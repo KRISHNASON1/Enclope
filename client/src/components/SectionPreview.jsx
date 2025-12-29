@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export default function SectionPreview({ title, subtitle, description, imageUrl, linkTo, reverse = false }) {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+export default function SectionPreview({ title, subtitle, desription, imageUrl, linkTo, reverse = false }) {
+  const { ref , inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
     <motion.section 

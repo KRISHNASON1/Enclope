@@ -6,7 +6,7 @@ const projectSchema = new mongoose.Schema({
     type: String,
     required: true, // The title is mandatory
   },
-  description: {
+  desription : {
     type: String,
     required: true,
   },
