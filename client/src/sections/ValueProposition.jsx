@@ -79,29 +79,29 @@ const TriptychCard = ({ card, index }) => {
       {/* 1. THE HIDDEN WORLD (Background Image) */}
       <motion.div
         style={{ x: bgX, y: bgY, scale: 1.2 }}
-        className="absolute inset-0 z-0 opacity-0 group-hover:opacity-60 transition-opacity duration-700 ease-out"
+        className="absolute inset-0 z-0 opacity-60 md:opacity-0 md:group-hover:opacity-60 transition-opacity duration-700 ease-out"
       >
-        <img 
-          src={card.image} 
-          alt={card.title} 
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+        <img
+          src={card.image}
+          alt={card.title}
+          className="w-full h-full object-cover grayscale-0 md:grayscale md:group-hover:grayscale-0 transition-all duration-700"
         />
         {/* Dark Overlay to keep text readable */}
         <div className="absolute inset-0 bg-black/60 mix-blend-multiply" />
       </motion.div>
 
       {/* 2. THE BLACK GLASS (Default State) */}
-      <div className="absolute inset-0 z-10 bg-black/80 group-hover:bg-transparent transition-colors duration-700" />
+      <div className="absolute inset-0 z-10 bg-transparent md:bg-black/80 md:group-hover:bg-transparent transition-colors duration-700" />
 
       {/* 3. CONTENT LAYER (Floats on top) */}
       <div className="relative z-20 h-full p-10 flex flex-col justify-between pointer-events-none" style={{ transform: "translateZ(50px)" }}>
-        
+
         {/* Top: Header */}
         <div className="flex justify-between items-start">
           <span className="font-mono text-xs text-white/30 border border-white/10 px-2 py-1 rounded-full group-hover:text-white group-hover:border-white/30 transition-colors">
             {card.id}
           </span>
-          <motion.div 
+          <motion.div
             className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500"
           >
             <ArrowUpRight className="text-white w-5 h-5" />
@@ -113,12 +113,12 @@ const TriptychCard = ({ card, index }) => {
           <h3 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tighter">
             {card.title}
           </h3>
-          <div className="h-0 overflow-hidden group-hover:h-auto transition-all duration-500">
-             <p className="text-lg text-white/80 font-light leading-relaxed max-w-xs pt-4 border-t border-white/20">
-               {card.description}
-             </p>
+          <div className="h-auto md:h-0 md:overflow-hidden md:group-hover:h-auto transition-all duration-500">
+            <p className="text-lg text-white/80 font-light leading-relaxed max-w-xs pt-4 border-t border-white/20">
+              {card.description}
+            </p>
           </div>
-          <div className="group-hover:hidden text-accent font-mono text-xs tracking-[0.3em] uppercase mt-2">
+          <div className="hidden md:block md:group-hover:hidden text-accent font-mono text-xs tracking-[0.3em] uppercase mt-2">
             {card.subtitle}
           </div>
         </div>
@@ -134,20 +134,20 @@ const TriptychCard = ({ card, index }) => {
 export default function ValueProposition() {
   return (
     <section className="relative py-32 bg-black overflow-hidden">
-      
+
       {/* Background Ambience */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_rgba(20,20,20,1)_0%,_rgba(0,0,0,1)_100%)] z-0" />
 
       <div className="container mx-auto px-6 relative z-10">
-        
+
         {/* HEADER */}
         <div className="mb-24 text-center">
-           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-             The <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">Foundry</span> Pillars
-           </h2>
-           <p className="text-text-secondary max-w-xl mx-auto">
-             Explore the core principles that define our engineering output.
-           </p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">Foundry</span> Pillars
+          </h2>
+          <p className="text-text-secondary max-w-xl mx-auto">
+            Explore the core principles that define our engineering output.
+          </p>
         </div>
 
         {/* THE TRIPTYCH GRID */}
