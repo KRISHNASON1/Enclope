@@ -40,7 +40,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link to="/" onClick={handleNavClick} className="text-3xl font-heading tracking-wider">
-            <span className="text-text-primary">E</span><span className="text-text-secondary">nclop</span>
+            <span className="text-text-primary">E</span><span className="text-text-secondary">nclope</span>
           </Link>
 
           {/* Desktop Menu */}
